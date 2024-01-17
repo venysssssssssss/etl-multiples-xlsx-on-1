@@ -27,6 +27,4 @@ Aqui, você encontrará instruções detalhadas sobre como instalar e configurar
 
 Esta seção fornece respostas para perguntas frequentes. Se você tiver alguma dúvida que não está coberta aqui, sinta-se à vontade para entrar em contato.
 
-## Contato
 
-Para quaisquer dúvidas, feedbacks ou suporte relacionado ao projeto, você pode entrar em contato diretamente através do e-mail: [lvgalvaofilho@gmail.com](mailto:lvgalvaofilho@gmail.com). Estou sempre disposto a ajudar!
