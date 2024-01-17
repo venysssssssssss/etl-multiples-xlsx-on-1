@@ -1,22 +1,23 @@
-import os 
 import glob
-
-import pandas as pd 
+import os
 from typing import List
 
-"""
-função para ler os arquivos de uma pasta data/input, e retornar uma lista de dataframes
+import pandas as pd
 
-args: input_path (str): caminho para a pasta com os arquivos de entrada
+path = 'data/input'
 
-return: list: lista de dataframes
-
-"""
-path = "data/input"
 
 def extract_from_excel(path: str) -> list[pd.DataFrame]:
-    all_files = glob.glob(os.path.join(path, "*.xlsx"))
-    
+    """
+    função para ler os arquivos de uma pasta data/input, e retornar uma lista de dataframes
+
+    args: input_path (str): caminho para a pasta com os arquivos de entrada
+
+    return: list: lista de dataframes
+
+    """
+    all_files = glob.glob(os.path.join(path, '*.xlsx'))
+
     data_frame_list = []
     for file in all_files:
         data_frame_list.append(pd.read_excel(file))
@@ -24,8 +25,7 @@ def extract_from_excel(path: str) -> list[pd.DataFrame]:
     return data_frame_list
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     data_frame_list = extract_from_excel(path)
     print(data_frame_list)
-    print("hello world")
-
+    print('hello world')

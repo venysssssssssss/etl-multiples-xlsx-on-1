@@ -10,8 +10,29 @@ readme = "README.md"
 python = "3.11.3"
 pandas = "^2.1.4"
 openpyxl = "^3.1.2"
+pytest = "^7.4.4"
+isort = "^5.13.2"
+blue = "^0.9.1"
+mkdocs = "^1.5.3"
+mkdocstrings-python = "^1.8.0"
+pygments = "^2.17.2"
+mkdocs-material = "^9.5.4"
+pymdown-extensions = "^10.7"
 
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+
+[tool.taskipy.tasks]
+format = """
+isort .
+black .
+"""
+kill = "kill -9 $(lsof -t -i :8000)"
+test = "pytest -v"
+run = """
+python3 app/main.py
+"""
+doc = "mkdocs serve"
