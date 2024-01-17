@@ -1,4 +1,5 @@
 import pandas as pd
+
 from src.pipeline.transform import contact_dataframes
 
 
@@ -39,5 +40,3 @@ def test_contact_dataframes():
     assert act.equals(arrange)
     assert act.shape == (0, 0)
     assert arrange.shape == (0, 0)
-
-

@@ -1,11 +1,10 @@
 from pipeline.extract import extract_from_excel
-from pipeline.transform import contact_dataframes
 from pipeline.load import load_to_excel
+from pipeline.transform import contact_dataframes
 
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     # Extract
-    data_frame_list = extract_from_excel("data/input")
+    data_frame_list = extract_from_excel('data/input')
 
     print(type(data_frame_list))
 
@@ -15,4 +14,4 @@ if __name__ == "__main__":
     print(type(data_frame))
 
     # Load
-    load_to_excel(data_frame, "data/output", "output")
+    load_to_excel(data_frame, 'data/output', 'output')

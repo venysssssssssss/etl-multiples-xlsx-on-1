@@ -1,5 +1,7 @@
-import pandas as pd 
 from typing import List
+
+import pandas as pd
+
 
 def contact_dataframes(data_frame_list: list[pd.DataFrame]) -> pd.DataFrame:
     """
